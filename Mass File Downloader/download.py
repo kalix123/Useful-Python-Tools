@@ -1,7 +1,7 @@
 import requests
 
 def DownloadFile(url, index):
-    local_filename = f"audio_files/Unit {index}.mp3"
+    local_filename = f"audio_files/File {index}.mp3"
     r = requests.get(url)
     with open(local_filename, 'wb') as f:
         for chunk in r.iter_content(chunk_size=1024): 
