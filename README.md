@@ -1,2 +1,3 @@
-# Usefull-Python-Tools
-A collection of python tools that are helpful in day to day life
+# Useful-Python-Tools
+## About
+Useful-Python-Tools is a collection of simple python projects for completing daily tasks. All contributions are welcome!
