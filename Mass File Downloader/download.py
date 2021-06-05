@@ -1,10 +1,12 @@
 import requests
 import os
+import pathlib
 
 def DownloadFile(url, index):
     if not os.path.exists('audio_files'):
         os.makedirs('audio_files')
-    local_filename = f"audio_files/File {index}.mp3"
+    extension = pathlib.Path(url).suffix
+    local_filename = f"audio_files/File {index}{extension}"
     r = requests.get(url)
     with open(local_filename, 'wb') as f:
         for chunk in r.iter_content(chunk_size=1024): 
