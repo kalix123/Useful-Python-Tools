@@ -1,6 +1,9 @@
 import requests
+import os
 
 def DownloadFile(url, index):
+    if not os.path.exists('audio_files'):
+        os.makedirs('audio_files')
     local_filename = f"audio_files/File {index}.mp3"
     r = requests.get(url)
     with open(local_filename, 'wb') as f:
